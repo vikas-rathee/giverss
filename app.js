@@ -1,0 +1,33 @@
+var express = require("express");
+var path = require("path");
+var app = express();
+var db = require("./db");
+var bodyParser = require("body-parser");
+var mongoose = require("mongoose");
+
+// To set ejs as the templating engine
+app.set("view engine", "ejs");
+
+
+// To set the path from where the views will be rendered
+app.set("views", path.join(__dirname + "/views")); // views is also the default directory btw
+
+// Serving static files like css, images etc.
+app.use(express.static(__dirname + "/public"));
+
+// Use body parser to parse x-www-form-urlencoded data which is the data submitted by form
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Parse body to JSON
+app.use(bodyParser.json());
+
+app.get("/", (req, res) => {
+  res.render("home");
+})
+
+
+
+
+app.listen(3000, () => {
+  console.log("Listening to port 3000");
+});

@@ -1,0 +1,17 @@
+{
+  "name": "Giverss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Vikas Rathee",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "i": "^0.3.6",
+    "mongoose": "^5.3.4",
+    "nodemon": "^1.18.4"
+  }
+}
